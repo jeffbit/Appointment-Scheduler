@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="471.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BrownJeffSoftware2.AddAppointmentController">
+   <children>
+      <GridPane layoutX="225.0" layoutY="20.0" prefHeight="394.0" prefWidth="309.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="titleText" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" GridPane.halignment="CENTER" />
+            <Text fx:id="DescriptionText" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Text fx:id="locationText" strokeType="OUTSIDE" strokeWidth="0.0" text="Location" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Text fx:id="contactText" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Text fx:id="typeText" strokeType="OUTSIDE" strokeWidth="0.0" text="Type" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <Text fx:id="urlText" strokeType="OUTSIDE" strokeWidth="0.0" text="Url" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <TextField fx:id="urlTextField" promptText="example@email.com" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <ComboBox fx:id="typeComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+            <TextField fx:id="locationTextField" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <TextField fx:id="descriptionTextField" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <TextField fx:id="titleTextField" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Date" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+            <ComboBox fx:id="startHrComboBox" prefHeight="28.0" prefWidth="74.0" promptText="hr" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
+            <DatePicker fx:id="startDatePicker" promptText="Select Date" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+            <ComboBox fx:id="contactComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="startMinComboBox" prefHeight="22.0" prefWidth="72.0" promptText="min" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+      <TableView fx:id="AppointmentCustomerTable" layoutX="25.0" layoutY="41.0" prefHeight="405.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="customerIdTableView" prefWidth="90.66665267944336" text="Customer ID" />
+          <TableColumn fx:id="customerNameTableView" prefWidth="108.00003051757812" text="Customer Name" />
+        </columns>
+      </TableView>
+      <Button fx:id="saveBtn" layoutX="249.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleSaveBtnAction" prefHeight="35.0" prefWidth="132.0" text="Save" />
+      <Button fx:id="cancelBtn" layoutX="392.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleCancelBtnAction" prefHeight="35.0" prefWidth="132.0" text="Cancel" />
+      <Text layoutX="67.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Customer to add to Appointment" wrappingWidth="115.33332943916332" />
+   </children>
+</AnchorPane>
